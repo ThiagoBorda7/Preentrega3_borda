@@ -74,5 +74,5 @@ function eliminar_del_carrito(e) {
     productos_en_carrito.splice(index, 1);
     cargar_productos();
 
-    localStorage.setItem("productos_en_carrito", JSON.stringify(productos_en_carrito));
+    localStorage.setItem("productos_agregados", JSON.stringify(productos_en_carrito));
 }
