@@ -24,6 +24,7 @@ a{
     display: grid;
     grid-template-columns: 1fr 4fr;
     background: linear-gradient(to right, rgb(0 0 0 / .4), rgb(0 0 0 / .4)) ,url(01.png);
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center; 
 }
@@ -31,6 +32,7 @@ a{
 aside {
     padding: 2rem;
     color: white;
+    font-weight: bolder;
     position: sticky;
     top: 0;
     height: 100vh;
@@ -82,12 +84,61 @@ aside {
 
 .texto_footer {
     color: white;
+    font-weight: bolder;
     font-size: .85rem;
 }
 
 main {
     background-color: white;
     padding: 3rem;
+}
+
+.subtitulo {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.contenedor_slice {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    height: 500px;
+    margin-bottom: 4rem;
+}
+
+.img_slice {
+    width: 400px;
+    height: 100%;
+}
+
+.botones {
+    font-size: 30px;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, .7);
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    color: white;
+}
+
+.botones:hover {
+    cursor: pointer;
+    transform: scale(1.2, 1.2);
+}
+
+.atras {
+    left: 2%;
+    top: calc(50% - 70px);
+}
+
+.adelante {
+    right: 2%;
+    top: calc(50% - 70px);
 }
 
 .titulo_principal {
@@ -104,12 +155,16 @@ main {
 
 .producto_imagen {
     max-width: 100%;
-    border-radius: 1rem;
+    border-radius: .5rem;
+    cursor: pointer;
 }
+
+
 
 .producto_detalles {
     background-color: black;
     color: white;
+    font-weight: bolder;
     padding: .5rem;
     margin-top: -2rem;
     position: relative;
@@ -120,7 +175,9 @@ main {
 
 .producto_titulo {
     font-size: 1rem;
+    color: white;
 }
+
 
 .producto_agregar {
     border: 0;
@@ -159,11 +216,10 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(230, 230, 230);
     color: black;
+    border: 2px solid black;
     padding: .5rem;
     padding-right: 1.5rem;
-    border-radius: 1rem;
 }
 
 .carrito_producto_imagen {
@@ -184,19 +240,13 @@ main {
     cursor: pointer;
 }
 
+.carrito_producto_eliminar:hover {
+    background-color: orangered;
+}
+
 .carrito_acciones {
     display: flex;
     justify-content: space-between;
-}
-
-.carrito_acciones_vaciar {
-    border: 0;
-    background-color: rgb(230, 230, 230);
-    padding: 1rem;
-    border-radius: 1rem;
-    color: black;
-    text-transform: uppercase;
-    cursor: pointer;
 }
 
 .carrito_acciones_derecha {
@@ -209,9 +259,8 @@ main {
     padding: 1rem;
     color: black;
     text-transform: uppercase;
-    border-top-left-radius: 1rem;
-    border-bottom-left-radius: 1rem;
     gap: 1rem;
+    border: 2px solid black;
 }
 
 .carrito_acciones_comprar {
@@ -221,8 +270,6 @@ main {
     color: white;
     text-transform: uppercase;
     cursor: pointer;
-    border-top-right-radius: 1rem;
-    border-bottom-right-radius: 1rem;
 }
 
 .disabled {
@@ -248,14 +295,21 @@ main {
     aside {
         width: 270px;
     }
+    .subtitulo, .contenedor_slice {
+        display: none;
+    }
 }
-@media screen and (max-width: 675px) {
+@media screen and (max-width: 850px) {
     .contenedor_productos {
         grid-template-columns: 1fr 1fr;
     }
 
     aside {
         width: 270px;
+    }
+
+    .subtitulo, .contenedor_slice {
+        display: none;
     }
 }
 
@@ -285,10 +339,18 @@ main {
         visibility: visible;
     }
 
+    .boton_menu {
+        color: white;
+    }
+
     main {
         margin: 1rem;
         margin-top: 0;
         padding: 2rem;
+    }
+
+    .subtitulo, .contenedor_slice {
+        display: none;
     }
 
     .contenedor_productos {
@@ -299,13 +361,19 @@ main {
         display: flex;
         padding: 1rem;
         background-color: black;
+        font-weight: bolder;
         justify-content: space-between;
         align-items: center;
     }
 
-    .header_mobile .logo {
+    .bi-list {
+        font-weight: bolder;
+    }
+
+    .header_mobile, .logo {
         color: white;
     }
+
 
     .open_menu, .close_menu {
         background-color: transparent;

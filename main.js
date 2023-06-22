@@ -137,7 +137,10 @@ let arrayProductos = [
 let contenedor_productos = document.querySelector("#contenedor_productos");
 let botones = document.querySelectorAll(".boton_categoria");
 let titulo_principal = document.querySelector("#titulo_principal");
-let agregar = document.querySelectorAll(".producto_agregar");
+let agregar = document.querySelectorAll(".producto_agregar")
+
+
+
 
 
 function agregar_productos(producto_elegido) {
@@ -169,6 +172,7 @@ function agregar_productos(producto_elegido) {
 }
 
 agregar_productos(arrayProductos);
+
 
 //----------------------------------BOTONES NAV BAR----------------------------------------//
 
@@ -245,3 +249,8 @@ function agregar_a_carrito(e) {
     //GUARDO EL ARREGLO
     localStorage.setItem("productos_agregados", JSON.stringify(productos_en_carrito));
 }
+
+
+
+
+
