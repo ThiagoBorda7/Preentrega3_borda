@@ -1,135 +1,11 @@
-let arrayProductos = [
-    {
-        id: "botas_01",
-        titulo: "Botines 01",
-        imagen: "01.png",
-        categoria: {
-            nombre: "Botines",
-            id: "botines"
-        },
-        precio: 1000
-    },
-    {
-        id: "botas_02",
-        titulo: "Botines 02",
-        imagen: "02.png",
-        categoria: {
-            nombre: "Botines",
-            id: "botines"
-        },
-        precio: 1000
-    },
-    {
-        id: "botas_03",
-        titulo: "Botines 03",
-        imagen: "03.png",
-        categoria: {
-            nombre: "Botines",
-            id: "botines"
-        },
-        precio: 1000
-    },
-    {
-        id: "botas_04",
-        titulo: "Botines 04",
-        imagen: "https://cdn.shopify.com/s/files/1/0597/1961/4620/products/IMG-20220720-WA0010.jpg?v=1659237350",
-        categoria: {
-            nombre: "Botines",
-            id: "botines"
-        },
-        precio: 1000
-    },
-    {
-        id: "mocasines_05",
-        titulo: "Mocasines 05",
-        imagen: "05.jpg",
-        categoria: {
-            nombre: "Mocasines",
-            id: "mocasines"
-        },
-        precio: 1000
-    },
-    {
-        id: "mocasines_06",
-        titulo: "Mocasines 06",
-        imagen: "06.png",
-        categoria: {
-            nombre: "Mocasines",
-            id: "mocasines"
-        },
-        precio: 1000
-    },
-    // {
-    //     id: "mocasines_07",
-    //     titulo: "Mocasines 07",
-    //     imagen: "https://cdn.shopify.com/s/files/1/0597/1961/4620/products/IMG-20220709-WA0006.jpg?v=1659240020&width=360",
-    //     categoria: {
-    //         nombre: "Mocasines",
-    //         id: "mocasines"
-    //     },
-    //     precio: 1000
-    // },
-    // {
-    //     id: "mocasines_08",
-    //     titulo: "Mocasines 08",
-    //     imagen: "https://cdn.shopify.com/s/files/1/0597/1961/4620/products/IMG-20220423-WA0012_1.jpg?v=1659239971&width=360",
-    //     categoria: {
-    //         nombre: "Mocasines",
-    //         id: "mocasines"
-    //     },
-    //     precio: 1000
-    // },
-    {
-        id: "animal_print_09",
-        titulo: "Animal Print 09",
-        imagen: "09.png",
-        categoria: {
-            nombre: "Animal Print",
-            id: "animal_print"
-        },
-        precio: 1000
-    },
-    {
-        id: "animal_print_10",
-        titulo: "Animal Print 10",
-        imagen: "10.png",
-        categoria: {
-            nombre: "Animal Print",
-            id: "animal_print"
-        },
-        precio: 1000
-    },
-    {
-        id: "charol_11",
-        titulo: "Charol 11",
-        imagen: "11.png",
-        categoria: {
-            nombre: "Charol",
-            id: "charol"
-        },
-        precio: 1000
-    },
-    {
-        id: "charol_12",
-        titulo: "Charol 12",
-        imagen: "12.png",
-        categoria: {
-            nombre: "Charol",
-            id: "charol"
-        },
-        precio: 1000
-    },
-    {
-        id: "charol_13",
-        titulo: "Charol 13",
-        imagen: "13.png",
-        categoria: {
-            nombre: "Charol",
-            id: "charol"
-        },
-        precio: 1000
-    },
-];
+let arrayProductos = [];
+
+fetch("./js/productos.json")
+    .then(response => response.json())
+    .then(data =>{
+        arrayProductos = data;
+        agregar_productos(arrayProductos);
+    })
 
 //-------------------CAPTURO TODOS LOS NODOS----------------------//
 
@@ -171,7 +47,7 @@ function agregar_productos(producto_elegido) {
 
 }
 
-agregar_productos(arrayProductos);
+
 
 
 //----------------------------------BOTONES NAV BAR----------------------------------------//
@@ -226,6 +102,22 @@ if (productos_en_carrito_ls) {
 
 
 function agregar_a_carrito(e) {
+
+    Toastify({
+        text: "Producto Agregado",
+        duration: 3000,
+        close: true,
+        gravity: "top", 
+        position: "right", 
+        stopOnFocus: true, 
+        style: {
+        background: "linear-gradient(to right, #000, #333)",
+        borderRadius: "2rem",
+        textTransform: "Uppercase",
+        fontSize: ".75rem",
+        },
+        onClick: function(){} 
+    }).showToast();
 
     let id_boton = e.currentTarget.id;
 

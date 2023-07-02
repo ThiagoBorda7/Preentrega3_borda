@@ -1,4 +1,4 @@
-let imagenes = ["01.png", "01a.png", "01b.jpg", "02.png", "02a.png", "03.png", "03a.jpg"];
+let imagenes = ["./img/01.png", "./img/01a.png", "./img/01b.jpg", "./img/02.png", "./img/02a.png", "./img/03.png", "./img/03a.jpg"];
 cont = 0
 
 function carrousel(contenedor) {

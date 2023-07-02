@@ -23,7 +23,7 @@ a{
 .wrapper{
     display: grid;
     grid-template-columns: 1fr 4fr;
-    background: linear-gradient(to right, rgb(0 0 0 / .4), rgb(0 0 0 / .4)) ,url(01.png);
+    background: linear-gradient(to right, rgb(0 0 0 / .4), rgb(0 0 0 / .4)), url(/img/01.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center; 
@@ -249,6 +249,16 @@ main {
     justify-content: space-between;
 }
 
+.carrito_acciones_vaciar {
+    border: 0;
+    background-color: black;
+    padding: 1rem;
+    border-radius: 1rem;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
 .carrito_acciones_derecha {
     display: flex;
 }
@@ -341,6 +351,11 @@ main {
 
     .boton_menu {
         color: white;
+    }
+
+    .boton_menu.active::before,
+    .boton_menu.active::after {
+        display: none;
     }
 
     main {
