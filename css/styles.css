@@ -23,7 +23,7 @@ a{
 .wrapper{
     display: grid;
     grid-template-columns: 1fr 4fr;
-    background: linear-gradient(to right, rgb(0 0 0 / .4), rgb(0 0 0 / .4)), url(/img/02.png);
+    background: linear-gradient(to right, rgb(0 0 0 / .4), rgb(0 0 0 / .4)), url(../img/02.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center; 
