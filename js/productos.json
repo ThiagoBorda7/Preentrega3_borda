@@ -7,7 +7,7 @@
             "nombre": "Botines",
             "id": "botines"
         },
-        "precio": 1000
+        "precio": 38000
     },
     {
         "id": "botas_02",
@@ -17,7 +17,7 @@
             "nombre": "Botines",
             "id": "botines"
         },
-        "precio": 1000
+        "precio": 30000
     },
     {
         "id": "botas_03",
@@ -27,7 +27,7 @@
             "nombre": "Botines",
             "id": "botines"
         },
-        "precio": 1000
+        "precio": 30000
     },
     {
         "id": "botas_04",
@@ -37,7 +37,7 @@
             "nombre": "Botines",
             "id": "botines"
         },
-        "precio": 1000
+        "precio": 40000
     },
     {
         "id": "mocasines_05",
@@ -47,7 +47,7 @@
             "nombre": "Mocasines",
             "id": "mocasines"
         },
-        "precio": 1000
+        "precio": 23000
     },
     {
         "id": "mocasines_06",
@@ -57,7 +57,7 @@
             "nombre": "Mocasines",
             "id": "mocasines"
         },
-        "precio": 1000
+        "precio": 25000
     },
     {
         "id": "animal_print_09",
@@ -67,7 +67,7 @@
             "nombre": "Animal Print",
             "id": "animal_print"
         },
-        "precio": 1000
+        "precio": 27000
     },
     {
         "id": "animal_print_10",
@@ -77,7 +77,7 @@
             "nombre": "Animal Print",
             "id": "animal_print"
         },
-        "precio": 1000
+        "precio": 27000
     },
     {
         "id": "charol_11",
@@ -87,7 +87,7 @@
             "nombre": "Charol",
             "id": "charol"
         },
-        "precio": 1000
+        "precio": 28000
     },
     {
         "id": "charol_12",
@@ -97,7 +97,7 @@
             "nombre": "Charol",
             "id": "charol"
         },
-        "precio": 1000
+        "precio": 23000
     },
     {
         "id": "charol_13",
@@ -107,7 +107,7 @@
             "nombre": "Charol",
             "id": "charol"
         },
-        "precio": 1000
+        "precio": 23000
     }
 ]
 

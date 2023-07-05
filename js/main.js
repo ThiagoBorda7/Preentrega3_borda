@@ -7,6 +7,7 @@ fetch("./js/productos.json")
         agregar_productos(arrayProductos);
     })
 
+
 //-------------------CAPTURO TODOS LOS NODOS----------------------//
 
 
@@ -59,7 +60,7 @@ botones.forEach(boton => {
 
         e.currentTarget.classList.add("active");
 
-        if( e.currentTarget.id != "all" ) {
+        if ( e.currentTarget.id != "all" ) {
 
             let titulo_categoria = arrayProductos.find(producto => producto.categoria.id === e.currentTarget.id);
             titulo_principal.innerText = titulo_categoria.categoria.nombre;
